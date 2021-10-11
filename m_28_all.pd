@@ -1,0 +1,27 @@
+#N canvas 993 274 711 796 12;
+#X obj 56 381 text get modes;
+#X obj 56 406 list split 1;
+#X msg 56 431 symbol \$1;
+#X msg 56 456 label \$1;
+#X obj 22 22 cnv 10 98 17 empty \$0-cnv phrygian_H3 1 12 1 14 -257983
+-66577 0;
+#X obj 56 481 s \$0-cnv;
+#X obj 189 81 s \$1-\$2-set;
+#X obj 189 56 r \$1-\$2_set;
+#X obj 56 186 r \$1-\$2;
+#X obj 20 42 7x4 \$1 \$2 \$3 \$4;
+#X obj 77 262 s \$1-m0_set;
+#X obj 87 285 s \$1-m1_set;
+#X obj 97 308 s \$1-m2_set;
+#X obj 107 331 s \$1-m3_set;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 5 0;
+#X connect 7 0 6 0;
+#X connect 8 0 0 0;
+#X connect 8 0 10 0;
+#X connect 8 0 13 0;
+#X connect 8 0 12 0;
+#X connect 8 0 11 0;
+#X coords 0 -1 1 1 102 82 2 20 20;

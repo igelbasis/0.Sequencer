@@ -1,0 +1,25 @@
+#N canvas 194 182 368 593 12;
+#X obj 56 211 text get modes;
+#X obj 56 236 list split 1;
+#X msg 56 261 symbol \$1;
+#X msg 56 286 label \$1;
+#X obj 22 22 cnv 10 98 17 empty \$0-cnv ionian 1 12 1 14 -257983 -66577
+0;
+#X obj 56 311 s \$0-cnv;
+#X obj 95 343 list prepend 0;
+#X obj 189 81 s \$1-\$2-set;
+#X obj 189 56 r \$1-\$2_set;
+#X obj 56 186 r \$1-\$2;
+#X obj 46 410 array define -k -yrange 0 12 \$1-\$2_table 7;
+#A 0 0 2 4 5 7 9 11;
+#X obj 95 368 s \$1-\$2_table;
+#X obj 20 42 7x4 \$1 \$2 \$3 \$4;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 1 6 0;
+#X connect 2 0 3 0;
+#X connect 3 0 5 0;
+#X connect 6 0 11 0;
+#X connect 8 0 7 0;
+#X connect 9 0 0 0;
+#X coords 0 -1 1 1 102 82 2 20 20;
