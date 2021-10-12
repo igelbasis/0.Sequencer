@@ -1,4 +1,4 @@
-#N canvas 419 136 1613 641 12;
+#N canvas 197 159 1373 848 12;
 #X declare -path ../0.beemo;
 #X declare -path ../0.beemo/cadsr;
 #X declare -path ../0.beemo/objects;
@@ -9,7 +9,7 @@
 #X declare -lib cyclone;
 #X declare -path objects;
 #X declare -path ../0.beemo/mod_cartridge;
-#X obj 317 375 output~;
+#X obj 447 375 output~;
 #N canvas 0 59 889 545 declarations_and_misc 0;
 #X obj 27 16 declare -path ../0.beemo;
 #X obj 27 41 declare -path ../0.beemo/cadsr;
@@ -48,11 +48,11 @@ dorian_b2 0 1 3 5 7 9 10 12 \; lydian_H5 0 2 4 6 8 9 11 12 \; lydian_b7
 #X connect 9 0 8 0;
 #X connect 10 0 11 0;
 #X connect 15 0 14 0;
-#X restore 1296 178 pd declarations_and_misc;
-#X obj 114 356 mix~ \$0 0;
-#X obj 771 42 mod_cart \$0;
+#X restore 1426 178 pd declarations_and_misc;
+#X obj 244 356 mix~ \$0 0;
+#X obj 914 45 mod_cart \$0;
 #N canvas 113 147 450 300 m28 0;
-#X restore 1298 83 pd m28;
+#X restore 1428 83 pd m28;
 #N canvas 92 99 612 233 metros 0;
 #X obj 54 96 metro;
 #X obj 77 71 r \$0-ms0;
@@ -82,7 +82,7 @@ dorian_b2 0 1 3 5 7 9 10 12 \; lydian_H5 0 2 4 6 8 9 11 12 \; lydian_b7
 #X connect 9 0 6 1;
 #X connect 10 0 7 0;
 #X connect 11 0 7 1;
-#X restore 1294 108 pd metros;
+#X restore 1424 108 pd metros;
 #N canvas 224 59 1055 780 sequencer 0;
 #X obj 582 94 sel 0 1;
 #X msg 582 119 0 1;
@@ -245,17 +245,13 @@ dorian_b2 0 1 3 5 7 9 10 12 \; lydian_H5 0 2 4 6 8 9 11 12 \; lydian_b7
 #X connect 70 0 35 0;
 #X connect 71 0 36 0;
 #X connect 72 0 37 0;
-#X restore 1295 133 pd sequencer;
-#X obj 208 356 mix~ \$0 1;
-#X obj 124 203 bng 32 250 50 0 \$0-init \$0-init-set empty 17 7 0 10
+#X restore 1425 133 pd sequencer;
+#X obj 338 356 mix~ \$0 1;
+#X obj 898 173 bng 32 250 50 0 \$0-init \$0-init-set empty 17 7 0 10
 -262144 -1 -1;
-#X obj 116 42 synth~ \$0 0 6;
-#X obj 116 241 synth~ \$0 1 6;
-#X obj 269 182 r \$0-midi_note0;
-#X obj 269 204 r \$0-midi_note2;
-#X obj 501 186 r \$0-midi_note1;
-#X obj 501 208 r \$0-midi_note3;
-#N canvas 1112 196 798 712 BOOKKEEPING 0;
+#X obj 246 42 synth~ \$0 0 6;
+#X obj 246 241 synth~ \$0 1 6;
+#N canvas 1112 196 798 712 BOOKKEEPING 1;
 #X obj 54 117 serialize, f 20;
 #X obj 46 319 parallelize, f 25;
 #X obj 92 179 + 1;
@@ -275,10 +271,6 @@ dorian_b2 0 1 3 5 7 9 10 12 \; lydian_H5 0 2 4 6 8 9 11 12 \; lydian_b7
 #X obj 456 248 loadbang;
 #X obj 456 273 s \$0-init-set;
 #X obj 377 274 f \$0;
-#X msg 377 299 - \; \$1-midi_pitch-set 60 \; \$1-bpm-set 120 \; \$1-difference-set
-0.125 \; \$1-mod_ms0-set 4 \; \$1-mod_ms1-set 4 \; \$1-mod_ms2-set
-4 \; \$1-mod_ms3-set 4 \; \$1-score_board-set 0 \; \$1-GET_MODE 1 \;
-;
 #X obj 594 237 del 40;
 #X obj 68 428 text define -k \$0-speed_history;
 #A set 7 8 0 1 \; 6 7 1 2 \; 5 6 2 3 \; 4 5 3 4 \; 3 4 4 5 \; 2 3 5
@@ -287,6 +279,10 @@ dorian_b2 0 1 3 5 7 9 10 12 \; lydian_H5 0 2 4 6 8 9 11 12 \; lydian_b7
 4 3 2 1 \; 3 2 1 0 \; 6 4 4 2 \; 6 3 5 2 \; 1 2 6 7 \; 0 1 7 8 \; 6
 1 8 3 \; 6 0 8 2 \;;
 #X obj 83 403 r \$0-SPEED_HISTORY;
+#X msg 377 299 - \; \$1-midi_pitch-set 60 \; \$1-bpm-set 120 \; \$1-difference-set
+0.125 \; \$1-mod_ms0-set 4 \; \$1-mod_ms1-set 4 \; \$1-mod_ms2-set
+4 \; \$1-mod_ms3-set 4 \; \$1-score_board-set 0 \; \$1-ma_set 6 \;
+;
 #X connect 0 0 1 0;
 #X connect 0 1 2 0;
 #X connect 0 2 1 2;
@@ -300,14 +296,14 @@ dorian_b2 0 1 3 5 7 9 10 12 \; lydian_H5 0 2 4 6 8 9 11 12 \; lydian_b7
 #X connect 10 0 11 0;
 #X connect 11 0 8 0;
 #X connect 12 0 15 0;
-#X connect 12 0 17 0;
+#X connect 12 0 16 0;
 #X connect 13 0 14 0;
-#X connect 13 0 17 0;
-#X connect 15 0 16 0;
-#X connect 17 0 10 0;
-#X connect 17 0 6 0;
-#X connect 19 0 18 0;
-#X restore 1295 156 pd BOOKKEEPING;
+#X connect 13 0 16 0;
+#X connect 15 0 19 0;
+#X connect 16 0 10 0;
+#X connect 16 0 6 0;
+#X connect 18 0 17 0;
+#X restore 1425 156 pd BOOKKEEPING;
 #N canvas 559 59 918 673 clock 0;
 #X obj 672 827;
 #N canvas 0 59 1270 940 conversion 0;
@@ -479,15 +475,15 @@ dorian_b2 0 1 3 5 7 9 10 12 \; lydian_H5 0 2 4 6 8 9 11 12 \; lydian_b7
 #X floatatom 527 178 0 0 0 0 - #0-bpm2-set #0-bpm2;
 #X floatatom 527 202 0 0 0 0 - #0-bpm3-set #0-bpm3;
 #X obj 111 103 tgl 22 0 \$0-m_toggle0 \$0-m_toggle0-set empty 17 7
-0 10 -262144 -1 -1 1 1;
+0 10 -262144 -1 -1 0 1;
 #X obj 135 103 tgl 22 0 \$0-m_toggle1 \$0-m_toggle1-set empty 17 7
-0 10 -262144 -1 -1 1 1;
+0 10 -262144 -1 -1 0 1;
 #X obj 111 127 tgl 22 0 \$0-m_toggle2 \$0-m_toggle2-set empty 17 7
-0 10 -262144 -1 -1 1 1;
+0 10 -262144 -1 -1 0 1;
 #X obj 135 127 tgl 22 0 \$0-m_toggle3 \$0-m_toggle3-set empty 17 7
-0 10 -262144 -1 -1 1 1;
+0 10 -262144 -1 -1 0 1;
 #X obj 63 103 tgl 46 0 \$0-m_toggle_ALL \$0-m_toggle_ALL-set empty
-17 7 0 10 -162280 -262144 -1 1 1;
+17 7 0 10 -162280 -262144 -1 0 1;
 #X obj 63 223 bng 34 250 50 0 \$0-bang0 \$0-bang0-set empty 17 7 0
 10 -191407 -262130 -1;
 #X obj 100 223 bng 34 250 50 0 \$0-bang1 \$0-bang1-set empty 17 7 0
@@ -498,17 +494,17 @@ dorian_b2 0 1 3 5 7 9 10 12 \; lydian_H5 0 2 4 6 8 9 11 12 \; lydian_b7
 10 -191407 -262130 -1;
 #X msg 73 74 1;
 #X obj 228 132 hradio 22 1 0 9 \$0-mod_ms0 \$0-mod_ms0-set empty 0
--8 0 10 -262144 -1 -1 6;
+-8 0 10 -262144 -1 -1 7;
 #X obj 228 156 hradio 22 1 0 9 \$0-mod_ms1 \$0-mod_ms1-set empty 0
--8 0 10 -262144 -1 -1 0;
-#X obj 228 180 hradio 22 1 0 9 \$0-mod_ms2 \$0-mod_ms2-set empty 0
 -8 0 10 -262144 -1 -1 8;
+#X obj 228 180 hradio 22 1 0 9 \$0-mod_ms2 \$0-mod_ms2-set empty 0
+-8 0 10 -262144 -1 -1 3;
 #X obj 228 204 hradio 22 1 0 9 \$0-mod_ms3 \$0-mod_ms3-set empty 0
--8 0 10 -262144 -1 -1 2;
+-8 0 10 -262144 -1 -1 0;
 #X obj 228 102 hradio 22 1 0 9 \$0-mod_ms_all \$0-mod_ms_all-set empty
 0 -8 0 9 -191407 -262144 -1 6;
 #X obj 63 154 hradio 24 1 0 4 \$0-score_board \$0-score_board-set empty
-0 -8 0 10 -128992 -262130 -1 0;
+0 -8 0 10 -128992 -262130 -1 1;
 #X floatatom 254 282 5 0 0 0 - #0-midi_pitch-set #0-midi_pitch;
 #X obj 159 103 bng 22 250 50 0 \$0-reset_sequence \$0-reset_sequence-set
 empty 17 7 0 10 -262144 -1 -1;
@@ -523,7 +519,7 @@ empty 17 7 0 10 -262144 -1 -1;
 #X obj 440 234 bng 24 250 50 0 \$0-w_speed_history \$0-w_speed_history-set
 empty 17 7 0 10 -261234 -1 -1;
 #X obj 251 234 hsl 159 24 0 1 0 0 \$0-speed_browser \$0-speed_browser-set
-empty -2 -8 0 10 -261234 -128992 -1 3950 0;
+empty -2 -8 0 10 -261234 -128992 -1 0 0;
 #X obj 414 234 bng 24 250 50 0 \$0-browser_up \$0-browser_up-set >>
 2 12 0 18 -191407 -1 -262144;
 #X obj 221 234 bng 24 250 50 0 \$0-browser_down \$0-browser_down-set
@@ -621,41 +617,55 @@ empty -2 -8 0 10 -261234 -128992 -1 3950 0;
 #X connect 57 0 53 0;
 #X connect 58 0 50 0;
 #X coords 0 -1 1 1 522 160 2 60 100;
-#X restore 776 378 pd clock;
-#X obj 451 155 m_28 \$0 m0 #fcdcc8 #f9f9f9 #9c9c9c;
-#X obj 241 155 m_28 \$0 m1 #fcdcc8 #f9f9f9;
-#X obj 556 155 m_28 \$0 m2 #fcdcc8 #f9f9f9;
-#X obj 346 155 m_28 \$0 m3 #fcdcc8 #f9f9f9;
-#X obj 661 155 m_28_all \$0 ma #eef8a9 #b9b9b9;
-#X msg 847 260 48;
-#X msg 781 260 36;
-#X msg 814 260 43;
-#X msg 782 284 55;
-#X msg 815 284 60;
-#X msg 848 284 67;
-#X msg 783 307 72;
-#X msg 816 307 79;
-#X msg 849 307 84;
-#X msg 781 335 pitch \$1;
-#X msg 891 259 speed 7 8 0 1;
+#X restore 560 467 pd clock;
+#X obj 581 155 m_28 \$0 m0 #fcdcc8 #f9f9f9 #9c9c9c;
+#X obj 371 155 m_28 \$0 m1 #fcdcc8 #f9f9f9;
+#X obj 686 155 m_28 \$0 m2 #fcdcc8 #f9f9f9;
+#X obj 476 155 m_28 \$0 m3 #fcdcc8 #f9f9f9;
+#X obj 791 155 m_28_all \$0 ma #eef8a9 #b9b9b9;
+#X msg 630 367 48;
+#X msg 564 367 36;
+#X msg 597 367 43;
+#X msg 565 391 55;
+#X msg 598 391 60;
+#X msg 631 391 67;
+#X msg 566 414 72;
+#X msg 599 414 79;
+#X msg 632 414 84;
+#X msg 564 442 pitch \$1;
+#X msg 674 366 speed 7 8 0 1;
+#X obj 1228 229 r \$0-msg;
+#X obj 1228 254 print;
+#X text 1055 230 mod_oc \; mod_ra \; mod_rb \; mod_bc \; mod_wf \;
+mod_tf;
+#X msg 1145 363 cast_spot \$0 0 mod_wf 0;
+#X obj 946 282 cast_spot \$0 0 mod_wf 0;
+#X obj 947 227 cast_spot \$0 1 mod_wf 1;
+#X obj 947 173 cast_spot \$0 0 mod_tf 0;
+#X obj 1047 175 cast_spot \$0 1 mod_ra 1;
+#X obj 254 199 r \$0-midi_note0;
+#X obj 252 175 r \$0-midi_note3;
+#X obj 254 221 r \$0-midi_note1;
+#X obj 252 153 r \$0-midi_note2;
 #X connect 2 0 0 0;
 #X connect 2 1 0 1;
 #X connect 7 0 0 0;
 #X connect 7 1 0 1;
 #X connect 9 0 2 0;
 #X connect 10 0 7 0;
-#X connect 11 0 9 0;
-#X connect 12 0 9 0;
-#X connect 13 0 10 0;
-#X connect 14 0 10 0;
-#X connect 22 0 31 0;
-#X connect 23 0 31 0;
-#X connect 24 0 31 0;
-#X connect 25 0 31 0;
-#X connect 26 0 31 0;
-#X connect 27 0 31 0;
-#X connect 28 0 31 0;
-#X connect 29 0 31 0;
-#X connect 30 0 31 0;
-#X connect 31 0 16 0;
-#X connect 32 0 16 0;
+#X connect 18 0 27 0;
+#X connect 19 0 27 0;
+#X connect 20 0 27 0;
+#X connect 21 0 27 0;
+#X connect 22 0 27 0;
+#X connect 23 0 27 0;
+#X connect 24 0 27 0;
+#X connect 25 0 27 0;
+#X connect 26 0 27 0;
+#X connect 27 0 12 0;
+#X connect 28 0 12 0;
+#X connect 29 0 30 0;
+#X connect 37 0 9 0;
+#X connect 38 0 10 0;
+#X connect 39 0 9 0;
+#X connect 40 0 10 0;
