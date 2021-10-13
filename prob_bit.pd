@@ -1,0 +1,21 @@
+#N canvas 510 302 801 687 12;
+#X obj 10 12 vsl 10 57 0 1 0 0 \$0-value \$0-value-set empty 0 -9 0
+10 -191407 -262130 -1 0 0;
+#X obj 33 17 r \$0-value;
+#X obj 33 42 t f b;
+#X obj 58 94 f \$3;
+#X obj 29 125 tabwrite \$1-probability, f 14;
+#X obj 169 25 loadbang;
+#X obj 169 73 sel 0;
+#X msg 169 97 color #b8b8b8 #ffc7c6 #ffc7c6;
+#X obj 169 121 s \$0-value-set;
+#X obj 169 49 f \$3;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 2 1 3 0;
+#X connect 3 0 4 1;
+#X connect 5 0 9 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 9 0 6 0;
+#X coords 0 -1 1 1 10 62 2 10 10;
