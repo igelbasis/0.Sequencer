@@ -1,4 +1,4 @@
-#N canvas 657 373 798 626 10;
+#N canvas 626 150 798 626 10;
 #X obj 22 36 bng 20 250 50 0 \$0-metro_button \$0-metro_button-set
 empty 17 7 0 10 -162280 -262144 -262144;
 #X floatatom 583 24 2 0 0 0 - #0-metro_toggle-set #0-metro_toggle;
@@ -85,7 +85,7 @@ $f2 == 0 \, 1 \, if($f1 == 0 && $f2 == 1 \, 2 \, if($f1 == 1 && $f2
 #X obj 158 148 sel 0;
 #X obj 195 178 s \$1-bang_\$2;
 #X obj 25 58 hsl 81 15 0 1 0 0 \$0-browser \$0-browser-set empty -2
--8 0 10 -191407 -262130 -1 4000 1;
+-8 0 10 -191407 -262130 -1 0 1;
 #X obj 44 36 bng 20 250 50 0 \$0-down \$0-down-set << 2 10 0 14 -191407
 -262144 -262130;
 #X obj 66 36 bng 20 250 50 0 \$0-up \$0-up-set >> 3 10 0 14 -191407
@@ -96,7 +96,7 @@ $f2 == 0 \, 1 \, if($f1 == 0 && $f2 == 1 \, 2 \, if($f1 == 1 && $f2
 #X obj 88 36 bng 20 250 50 0 \$0-reset \$0-reset-set empty 1 7 0 12
 -228856 -1 -1;
 #X obj 574 137 r \$0-reset;
-#N canvas 0 59 512 587 navi 0;
+#N canvas 0 59 756 724 navi 0;
 #X obj 32 106 r \$0-down;
 #X obj 32 131 t b b;
 #X obj 142 102 r \$0-up;
@@ -116,6 +116,15 @@ $f2 == 0 \, 1 \, if($f1 == 0 && $f2 == 1 \, 2 \, if($f1 == 1 && $f2
 #X obj 366 180 i;
 #X obj 286 344 s \$0-speed;
 #X obj 288 244 expr 14 - $f1;
+#X obj 451 278 r \$1-bpm;
+#X obj 451 301 expr 60000 / $f1;
+#X obj 435 390 f;
+#X obj 414 250 tabread \$1-speed_ratio;
+#X obj 404 337 t f b;
+#X obj 403 408 *;
+#X obj 403 431 s \$1-time_\$2;
+#X obj 414 273 f;
+#X obj 451 324 t b f;
 #X connect 0 0 1 0;
 #X connect 1 0 6 0;
 #X connect 1 1 4 0;
@@ -137,6 +146,17 @@ $f2 == 0 \, 1 \, if($f1 == 0 && $f2 == 1 \, 2 \, if($f1 == 1 && $f2
 #X connect 16 0 6 1;
 #X connect 16 0 10 0;
 #X connect 18 0 11 0;
+#X connect 18 0 22 0;
+#X connect 19 0 20 0;
+#X connect 20 0 27 0;
+#X connect 21 0 24 1;
+#X connect 22 0 26 0;
+#X connect 23 0 24 0;
+#X connect 23 1 21 0;
+#X connect 24 0 25 0;
+#X connect 26 0 23 0;
+#X connect 27 0 26 0;
+#X connect 27 1 21 1;
 #X restore 574 46 pd navi;
 #X obj 348 30 inlet;
 #X obj 342 182 s \$0-metro_button-set;

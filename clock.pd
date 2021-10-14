@@ -1,148 +1,151 @@
-#N canvas 206 284 798 643 10;
-#N canvas 786 336 835 474 clock 0;
+#N canvas 161 231 798 643 10;
+#N canvas 661 307 835 474 clock 0;
 #X obj 201 270 metro 0.125 120 permin;
 #X msg 219 239 tempo \$1 permin;
-#N canvas 0 59 923 377 visual 0;
-#X obj 91 41 f;
-#X obj 91 66 + 1;
-#X obj 91 116 sel 0;
-#X obj 92 178 bng 32 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#N canvas 358 636 1126 786 visual 0;
+#X obj 91 271 f;
+#X obj 91 296 + 1;
+#X obj 91 346 sel 0;
+#X obj 92 408 bng 32 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 141 41 f;
-#X obj 141 66 + 1;
-#X obj 141 116 sel 0;
-#X obj 142 178 bng 32 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 141 271 f;
+#X obj 141 296 + 1;
+#X obj 141 346 sel 0;
+#X obj 142 408 bng 32 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 141 91 % 3;
-#X obj 191 41 f;
-#X obj 191 66 + 1;
-#X obj 191 116 sel 0;
-#X obj 192 178 bng 32 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 141 321 % 3;
+#X obj 191 271 f;
+#X obj 191 296 + 1;
+#X obj 191 346 sel 0;
+#X obj 192 408 bng 32 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 251 41 f;
-#X obj 251 66 + 1;
-#X obj 251 116 sel 0;
-#X obj 252 178 bng 32 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 251 271 f;
+#X obj 251 296 + 1;
+#X obj 251 346 sel 0;
+#X obj 252 408 bng 32 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 191 91 % 4;
-#X obj 251 91 % 5;
-#X obj 301 41 f;
-#X obj 301 66 + 1;
-#X obj 301 116 sel 0;
-#X obj 302 178 bng 32 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 191 321 % 4;
+#X obj 251 321 % 5;
+#X obj 301 271 f;
+#X obj 301 296 + 1;
+#X obj 301 346 sel 0;
+#X obj 302 408 bng 32 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 351 41 f;
-#X obj 351 66 + 1;
-#X obj 351 116 sel 0;
-#X obj 352 178 bng 32 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 351 271 f;
+#X obj 351 296 + 1;
+#X obj 351 346 sel 0;
+#X obj 352 408 bng 32 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 411 41 f;
-#X obj 411 66 + 1;
-#X obj 411 116 sel 0;
-#X obj 412 178 bng 32 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 411 271 f;
+#X obj 411 296 + 1;
+#X obj 411 346 sel 0;
+#X obj 412 408 bng 32 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 301 91 % 6;
-#X obj 351 91 % 7;
-#X obj 411 91 % 8;
-#X obj 92 280 timer;
-#X floatatom 92 305 5 0 0 0 - - -;
-#X obj 92 215 t b b;
-#X obj 142 280 timer;
-#X floatatom 142 305 5 0 0 0 - - -;
-#X obj 142 215 t b b;
-#X obj 192 280 timer;
-#X floatatom 192 305 5 0 0 0 - - -;
-#X obj 192 215 t b b;
-#X obj 252 280 timer;
-#X floatatom 252 305 5 0 0 0 - - -;
-#X obj 252 215 t b b;
-#X obj 302 280 timer;
-#X floatatom 302 305 5 0 0 0 - - -;
-#X obj 302 215 t b b;
-#X obj 352 280 timer;
-#X floatatom 352 305 5 0 0 0 - - -;
-#X obj 352 215 t b b;
-#X obj 412 280 timer;
-#X floatatom 412 305 5 0 0 0 - - -;
-#X obj 412 215 t b b;
-#X obj 471 41 f;
-#X obj 471 66 + 1;
-#X obj 471 116 sel 0;
-#X obj 472 178 bng 32 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 301 321 % 6;
+#X obj 351 321 % 7;
+#X obj 411 321 % 8;
+#X obj 92 510 timer;
+#X floatatom 92 535 5 0 0 0 - - -;
+#X obj 92 445 t b b;
+#X obj 142 510 timer;
+#X floatatom 142 535 5 0 0 0 - - -;
+#X obj 142 445 t b b;
+#X obj 192 510 timer;
+#X floatatom 192 535 5 0 0 0 - - -;
+#X obj 192 445 t b b;
+#X obj 252 510 timer;
+#X floatatom 252 535 5 0 0 0 - - -;
+#X obj 252 445 t b b;
+#X obj 302 510 timer;
+#X floatatom 302 535 5 0 0 0 - - -;
+#X obj 302 445 t b b;
+#X obj 352 510 timer;
+#X floatatom 352 535 5 0 0 0 - - -;
+#X obj 352 445 t b b;
+#X obj 412 510 timer;
+#X floatatom 412 535 5 0 0 0 - - -;
+#X obj 412 445 t b b;
+#X obj 471 271 f;
+#X obj 471 296 + 1;
+#X obj 471 346 sel 0;
+#X obj 472 408 bng 32 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 521 41 f;
-#X obj 521 66 + 1;
-#X obj 521 116 sel 0;
-#X obj 522 178 bng 32 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 521 271 f;
+#X obj 521 296 + 1;
+#X obj 521 346 sel 0;
+#X obj 522 408 bng 32 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 571 41 f;
-#X obj 571 66 + 1;
-#X obj 571 116 sel 0;
-#X obj 572 178 bng 32 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 571 271 f;
+#X obj 571 296 + 1;
+#X obj 571 346 sel 0;
+#X obj 572 408 bng 32 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 631 41 f;
-#X obj 631 66 + 1;
-#X obj 631 116 sel 0;
-#X obj 632 178 bng 32 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 631 271 f;
+#X obj 631 296 + 1;
+#X obj 631 346 sel 0;
+#X obj 632 408 bng 32 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 681 41 f;
-#X obj 681 66 + 1;
-#X obj 681 116 sel 0;
-#X obj 682 178 bng 32 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 681 271 f;
+#X obj 681 296 + 1;
+#X obj 681 346 sel 0;
+#X obj 682 408 bng 32 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 731 41 f;
-#X obj 731 66 + 1;
-#X obj 731 116 sel 0;
-#X obj 732 178 bng 32 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 731 271 f;
+#X obj 731 296 + 1;
+#X obj 731 346 sel 0;
+#X obj 732 408 bng 32 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 472 280 timer;
-#X floatatom 472 305 5 0 0 0 - - -;
-#X obj 472 215 t b b;
-#X obj 522 280 timer;
-#X floatatom 522 305 5 0 0 0 - - -;
-#X obj 522 215 t b b;
-#X obj 572 280 timer;
-#X floatatom 572 305 5 0 0 0 - - -;
-#X obj 572 215 t b b;
-#X obj 632 280 timer;
-#X floatatom 632 305 5 0 0 0 - - -;
-#X obj 632 215 t b b;
-#X obj 682 280 timer;
-#X floatatom 682 305 5 0 0 0 - - -;
-#X obj 682 215 t b b;
-#X obj 732 280 timer;
-#X floatatom 732 305 5 0 0 0 - - -;
-#X obj 732 215 t b b;
-#X obj 42 178 bng 32 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 472 510 timer;
+#X floatatom 472 535 5 0 0 0 - - -;
+#X obj 472 445 t b b;
+#X obj 522 510 timer;
+#X floatatom 522 535 5 0 0 0 - - -;
+#X obj 522 445 t b b;
+#X obj 572 510 timer;
+#X floatatom 572 535 5 0 0 0 - - -;
+#X obj 572 445 t b b;
+#X obj 632 510 timer;
+#X floatatom 632 535 5 0 0 0 - - -;
+#X obj 632 445 t b b;
+#X obj 682 510 timer;
+#X floatatom 682 535 5 0 0 0 - - -;
+#X obj 682 445 t b b;
+#X obj 732 510 timer;
+#X floatatom 732 535 5 0 0 0 - - -;
+#X obj 732 445 t b b;
+#X obj 42 408 bng 32 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 42 280 timer;
-#X floatatom 42 305 5 0 0 0 - - -;
-#X obj 42 215 t b b;
-#X obj 471 91 % 12;
-#X obj 521 91 % 16;
-#X obj 571 91 % 24;
-#X obj 631 91 % 32;
-#X obj 681 91 % 48;
-#X obj 731 91 % 64;
-#X obj 781 41 f;
-#X obj 781 66 + 1;
-#X obj 781 116 sel 0;
-#X obj 782 178 bng 32 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 42 510 timer;
+#X floatatom 42 535 5 0 0 0 - - -;
+#X obj 42 445 t b b;
+#X obj 471 321 % 12;
+#X obj 521 321 % 16;
+#X obj 571 321 % 24;
+#X obj 631 321 % 32;
+#X obj 681 321 % 48;
+#X obj 731 321 % 64;
+#X obj 781 271 f;
+#X obj 781 296 + 1;
+#X obj 781 346 sel 0;
+#X obj 782 408 bng 32 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 831 41 f;
-#X obj 831 66 + 1;
-#X obj 831 116 sel 0;
-#X obj 832 178 bng 32 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 831 271 f;
+#X obj 831 296 + 1;
+#X obj 831 346 sel 0;
+#X obj 832 408 bng 32 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 782 280 timer;
-#X floatatom 782 305 5 0 0 0 - - -;
-#X obj 782 215 t b b;
-#X obj 832 280 timer;
-#X floatatom 832 305 5 0 0 0 - - -;
-#X obj 832 215 t b b;
-#X obj 781 91 % 96;
-#X obj 831 91 % 128;
-#X obj 91 91 % 2;
+#X obj 782 510 timer;
+#X floatatom 782 535 5 0 0 0 - - -;
+#X obj 782 445 t b b;
+#X obj 832 510 timer;
+#X floatatom 832 535 5 0 0 0 - - -;
+#X obj 832 445 t b b;
+#X obj 781 321 % 96;
+#X obj 831 321 % 128;
+#X obj 91 321 % 2;
+#X obj 273 117 r \$1-bang;
+#X msg 325 604 0.125 0.25 0.375 0.5 0.625 0.75 0.875 1 1.5 2 3 4 6
+8 12 16;
 #X connect 0 0 1 0;
 #X connect 1 0 123 0;
 #X connect 2 0 3 0;
@@ -295,7 +298,7 @@
 #X obj 430 46 f;
 #X obj 430 69 + 1;
 #X obj 430 92 % 2;
-#X obj 22 42 cnv 15 86 31 empty \$0-bg empty 20 12 0 14 -249661 -262144
+#X obj 22 42 cnv 15 86 31 empty \$0-bg empty 20 12 0 14 -262136 -262144
 0;
 #X floatatom 41 56 5 0 999 2 bpm #1-bpm-set #1-bpm;
 #X obj 22 56 bng 17 250 50 0 \$0-clock_button \$0-clock_button-set

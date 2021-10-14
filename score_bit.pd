@@ -1,6 +1,6 @@
 #N canvas 545 59 1042 697 12;
 #X obj 10 10 vradio 10 1 0 8 \$0-value \$0-value-set empty 0 -8 0 10
--191407 -262130 -191407 6;
+-191407 -228856 -191407 7;
 #X obj 48 21 r \$0-value;
 #X obj 30 225 expr 7 - $f1;
 #X obj 32 261 tabwrite \$1-score_table;
@@ -30,7 +30,6 @@
 #X obj 175 363 f;
 #X obj 96 342 t f b;
 #X obj 95 426 +;
-#X obj 468 552 sel 0 1 2;
 #X msg 457 610 symbol #dbffd0;
 #X msg 428 636 symbol #feffc6;
 #X msg 490 585 symbol #defeff;
@@ -38,7 +37,9 @@
 #X msg 236 503 symbol #dfdfdf;
 #X msg 254 541 color #bbbbbb \$1 #bbbbbb, f 8;
 #X msg 334 541 color #bbbbbb \$1 #bbbbbb, f 8;
-#X obj 468 527 r \$1-select_toggle;
+#X obj 471 491 r \$1-select_toggle;
+#X msg 517 555 symbol #fce0c4;
+#X obj 471 516 sel 0 1 2 3;
 #X connect 1 0 18 0;
 #X connect 2 0 3 0;
 #X connect 5 0 6 1;
@@ -51,8 +52,8 @@
 #X connect 13 0 11 0;
 #X connect 13 0 14 0;
 #X connect 14 0 15 0;
-#X connect 15 0 35 0;
-#X connect 15 1 34 0;
+#X connect 15 0 34 0;
+#X connect 15 1 33 0;
 #X connect 16 0 17 0;
 #X connect 17 0 19 1;
 #X connect 18 0 2 0;
@@ -72,15 +73,17 @@
 #X connect 28 0 22 0;
 #X connect 28 1 27 0;
 #X connect 29 0 10 0;
-#X connect 30 0 32 0;
-#X connect 30 1 31 0;
-#X connect 30 2 33 0;
-#X connect 31 0 34 1;
-#X connect 32 0 34 1;
-#X connect 33 0 34 1;
-#X connect 34 0 37 0;
-#X connect 35 0 36 0;
+#X connect 30 0 33 1;
+#X connect 31 0 33 1;
+#X connect 32 0 33 1;
+#X connect 33 0 36 0;
+#X connect 34 0 35 0;
+#X connect 35 0 4 0;
 #X connect 36 0 4 0;
-#X connect 37 0 4 0;
-#X connect 38 0 30 0;
+#X connect 37 0 39 0;
+#X connect 38 0 33 1;
+#X connect 39 0 31 0;
+#X connect 39 1 30 0;
+#X connect 39 2 32 0;
+#X connect 39 3 38 0;
 #X coords 0 -1 1 1 10 80 2 10 10;

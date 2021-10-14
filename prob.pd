@@ -1,6 +1,6 @@
-#N canvas 915 399 531 531 12;
+#N canvas 545 313 531 531 10;
 #X obj 197 12 array define -k -yrange 0 1 \$0-probability 7;
-#A 0 0.276667 0.296667 0 0.321429 0 0.571429 0.267857;
+#A 0 0 0 0 0 0 0 0;
 #X f 16;
 #X obj 324 10 inlet;
 #X obj 324 35 s \$0-msg;
@@ -17,8 +17,19 @@
 #X obj 65 29 prob_bit \$0 \$1 5;
 #X obj 75 29 prob_bit \$0 \$1 6;
 #X obj 85 29 prob_bit \$0 \$1 7;
+#X obj 88 12 bng 10 250 50 0 \$0-reset \$0-reset-set empty 17 7 0 10
+-228856 -262144 -162280;
+#X obj 309 111 r \$0-reset;
+#X obj 309 136 t b b;
+#X msg 351 216 const 0;
+#X obj 351 241 s \$0-probability;
+#X obj 302 306 s \$0-refresh;
 #X connect 1 0 2 0;
 #X connect 3 0 4 0;
 #X connect 4 0 5 0;
 #X connect 5 0 6 0;
+#X connect 17 0 18 0;
+#X connect 18 0 21 0;
+#X connect 18 1 19 0;
+#X connect 19 0 20 0;
 #X coords 0 -1 1 1 90 83 1 10 10;

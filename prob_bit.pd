@@ -5,11 +5,15 @@
 #X obj 33 42 t f b;
 #X obj 58 94 f \$3;
 #X obj 29 125 tabwrite \$1-probability, f 14;
-#X obj 169 25 loadbang;
-#X obj 169 73 sel 0;
-#X msg 169 97 color #b8b8b8 #ffc7c6 #ffc7c6;
-#X obj 169 121 s \$0-value-set;
-#X obj 169 49 f \$3;
+#X obj 307 184 loadbang;
+#X obj 307 232 sel 0;
+#X msg 307 256 color #b8b8b8 #ffc7c6 #ffc7c6;
+#X obj 307 280 s \$0-value-set;
+#X obj 307 208 f \$3;
+#X obj 218 40 r \$1-refresh;
+#X obj 218 65 \$3;
+#X obj 218 90 tabread \$1-probability;
+#X obj 218 115 s \$0-value-set;
 #X connect 1 0 2 0;
 #X connect 2 0 4 0;
 #X connect 2 1 3 0;
@@ -18,4 +22,7 @@
 #X connect 6 0 7 0;
 #X connect 7 0 8 0;
 #X connect 9 0 6 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
 #X coords 0 -1 1 1 10 62 2 10 10;
