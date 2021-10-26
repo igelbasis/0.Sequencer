@@ -1,4 +1,4 @@
-#N canvas 626 150 798 626 10;
+#N canvas 493 349 798 626 10;
 #X obj 22 36 bng 20 250 50 0 \$0-metro_button \$0-metro_button-set
 empty 17 7 0 10 -162280 -262144 -262144;
 #X floatatom 583 24 2 0 0 0 - #0-metro_toggle-set #0-metro_toggle;
@@ -67,7 +67,7 @@ $f2 == 0 \, 1 \, if($f1 == 0 && $f2 == 1 \, 2 \, if($f1 == 1 && $f2
 #X connect 6 0 4 0;
 #X connect 7 0 6 1;
 #X restore 574 114 pd button;
-#N canvas 0 59 450 300 on_time 0;
+#N canvas 128 192 450 300 on_time 0;
 #X obj 63 24 r \$1-on_time;
 #X obj 66 78 f;
 #X obj 66 103 s \$0-metro_switch-set;
@@ -85,7 +85,7 @@ $f2 == 0 \, 1 \, if($f1 == 0 && $f2 == 1 \, 2 \, if($f1 == 1 && $f2
 #X obj 158 148 sel 0;
 #X obj 195 178 s \$1-bang_\$2;
 #X obj 25 58 hsl 81 15 0 1 0 0 \$0-browser \$0-browser-set empty -2
--8 0 10 -191407 -262130 -1 0 1;
+-8 0 10 -191407 -262130 -1 4000 1;
 #X obj 44 36 bng 20 250 50 0 \$0-down \$0-down-set << 2 10 0 14 -191407
 -262144 -262130;
 #X obj 66 36 bng 20 250 50 0 \$0-up \$0-up-set >> 3 10 0 14 -191407
@@ -166,9 +166,9 @@ $f2 == 0 \, 1 \, if($f1 == 0 && $f2 == 1 \, 2 \, if($f1 == 1 && $f2
 #X obj 414 110 s \$0-down-set;
 #X obj 432 86 s \$0-browser-set;
 #X obj 157 201 outlet;
-#X obj 39 229 r \$1-init;
-#X msg 39 252 0.5;
-#X obj 39 275 s \$0-browser-set;
+#X obj 41 392 r \$1-init;
+#X msg 41 415 0.5;
+#X obj 41 438 s \$0-browser-set;
 #X connect 6 0 9 0;
 #X connect 7 0 6 1;
 #X connect 8 0 6 0;

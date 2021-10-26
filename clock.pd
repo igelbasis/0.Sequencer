@@ -1,8 +1,8 @@
-#N canvas 161 231 798 643 10;
-#N canvas 661 307 835 474 clock 0;
+#N canvas 631 267 798 643 10;
+#N canvas 551 303 835 474 clock 0;
 #X obj 201 270 metro 0.125 120 permin;
 #X msg 219 239 tempo \$1 permin;
-#N canvas 358 636 1126 786 visual 0;
+#N canvas 358 294 1126 786 visual 0;
 #X obj 91 271 f;
 #X obj 91 296 + 1;
 #X obj 91 346 sel 0;
